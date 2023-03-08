@@ -4,10 +4,10 @@ locals {
   }
   # This environment short mapping is for future use where we want to use a proper environment name for tags
   environment_short = {
-    p = "p"
-    x = "x"
-    s = "s"
-    d = "d"
+    p = "q"
+    x = "xy"
+    s = "t"
+    d = "e"
   }
   subscription_role_assignments_list = flatten([
     for role_definition_name, members in var.subscription_role_assignments : [
