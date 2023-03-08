@@ -1,0 +1,23 @@
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+
+# More details are here: https://help.github.com/articles/about-codeowners/
+
+# The '*' pattern is global owners.
+
+# Order is important. The last matching pattern has the most precedence.
+# The folders are ordered as follows:
+
+# In each subsection folders are ordered first by depth, then alphabetically.
+# This should make it easy to add new rules without breaking existing ones.
+
+# Configuration rule:
+# When appropriate add more groups below who will be notified when a pull request is opened.
+/configuration/corp/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/special-agencies-code-approver-team
+/configuration/grpm/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/groupm-code-approver-team
+/configuration/gry/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/grey-code-approver-team
+/configuration/hgrth/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/hogarth-code-approver-team
+/configuration/hk/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/hk-code-approver-team
+/configuration/oglvy/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/ogilvy-code-approver-team
+/configuration/vmlyr/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/vmlyr-code-approver-team
+/configuration/wt/ @WPP-Internal/wpp-it-azure-squad @WPP-Internal/wunderman-thompson-code-approver-team

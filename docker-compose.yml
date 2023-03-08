@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  terraform:
+    image: hashicorp/terraform
+    volumes:
+      - .:/infra
+      - "~/.terraform.d:/root/.terraform.d"
+    working_dir: /infra
+    environment: 
+      - ARM_CLIENT_ID=${ARM_CLIENT_ID}
+      - ARM_CLIENT_SECRET=${ARM_CLIENT_SECRET}
+      - ARM_SUBSCRIPTION_ID=${ARM_SUBSCRIPTION_ID}
+      - ARM_TENANT_ID=${ARM_TENANT_ID}
+      - TF_WORKSPACE=${TF_WORKSPACE}
+      - AZDO_ORG_SERVICE_URL=${AZDO_ORG_SERVICE_URL}
+      - AZDO_PERSONAL_ACCESS_TOKEN=${AZDO_PERSONAL_ACCESS_TOKEN}
+      - AZDO_GITHUB_SERVICE_CONNECTION_PAT=${AZDO_GITHUB_SERVICE_CONNECTION_PAT}
+  checkov:
+    image: bridgecrew/checkov
+    volumes:
+      - .:/infra
+    working_dir: /infra      
